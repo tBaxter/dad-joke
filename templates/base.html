@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ description }}{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="apple-touch-icon" href="">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}?u=b" />
+    <script src="{{ url_for('static', filename='js/site.js') }}?u=c" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="/">Not Funny, Dad (OK, maybe a little funny).</a></h1>
+      </header>
+    <main id="main">
+        {% block main %}{% endblock %}
+    </main>
+    <footer>
+        {% block footer %}{% endblock %}
+        A Carter Baxter production. &copy; 2024. 
+        You can <a href="https://github.com/tBaxter/">contribute to the source on Github.</a>
+        Argyle background by <a href="https://projects.verou.me/css3patterns/#argyle">Anna Kassner</a>.
+    </footer>
+    {% block lowerjs %}{% endblock %}
+  </body>
+</html>

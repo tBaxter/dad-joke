@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Not Funny, Dad{% endblock %}
+
+{% block main %}
+
+<div id="memer">
+    <img src="{{ photo.image }}" alt="{{ photo.alt }}" />
+    <h3 class="opener">{{ joke.opener }}</h3>
+    <h3 class="punchline">{{ joke.punchline }}</h3>
+</div>
+
+{% endblock %}
+{% block footer %}
+    <p class="credit">Joke courtesy of <a href="{{ joke.permalink }}">{{ joke.source }}</a>. 
+    Photo by <a href="{{ photo.photog_link }}">{{ photo.photog }}</a> via <a href="https://unsplash.com">Unsplash</a>.
+    Read more <a href="/about">about this site</a>, or come back in a minute for a fresh dad joke.</p>
+{% endblock %}
